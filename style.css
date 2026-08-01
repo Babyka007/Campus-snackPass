@@ -1,0 +1,541 @@
+/* ==========================================
+   SASTRA CAMPUS SNACKPASS
+   STYLE.CSS (PART 1)
+========================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* ==========================
+        NAVBAR
+========================== */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6b35;
+    letter-spacing: .5px;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b35;
+}
+
+/* ==========================
+        HERO SECTION
+========================== */
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600") center center/cover no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.overlay h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.overlay button {
+    padding: 15px 38px;
+    border: none;
+    border-radius: 50px;
+    background: #ff6b35;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.overlay button:hover {
+    background: #ff824f;
+    transform: translateY(-4px);
+}
+
+/* ==========================
+      FILTER SECTION
+========================== */
+
+.filter-section {
+    padding: 70px 8% 40px;
+    text-align: center;
+}
+
+.filter-section h2 {
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-btn {
+    border: none;
+    outline: none;
+    background: #ddd;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.filter-btn:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #ff6b35;
+    color: white;
+}
+
+/* ==========================
+        MENU GRID
+========================== */
+
+.menu {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+    padding: 30px 0 80px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, .15);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.food-content {
+    padding: 20px;
+}
+
+.food-content h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.food-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.food-content h4 {
+    color: #ff6b35;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.food-content button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6b35;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.food-content button:hover {
+    background: #e85a27;
+}
+
+/* ==========================
+     IMAGE EFFECT
+========================== */
+
+.food-card img {
+    transition: .4s;
+}
+
+.food-card:hover img {
+    transform: scale(1.05);
+}
+/* ==========================================
+   SASTRA CAMPUS SNACKPASS
+   STYLE.CSS (PART 2)
+========================================== */
+
+
+/* ==========================
+        CART SECTION
+========================== */
+
+.cart-section {
+    width: 90%;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+.cart-section h2 {
+    color: #ff6b35;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+#cartItems {
+    margin-bottom: 25px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+.cart-row:hover {
+    background: #efefef;
+}
+
+.cart-row span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.remove-btn {
+    border: none;
+    background: #dc3545;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.remove-btn:hover {
+    background: #b02a37;
+}
+
+.total {
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+#confirmOrder {
+    margin-top: 25px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #28a745;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#confirmOrder:hover {
+    background: #218838;
+}
+
+#tokenBox {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff7e6;
+    border-left: 6px solid #ff6b35;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer {
+    background: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 45px 20px;
+    margin-top: 70px;
+}
+
+footer h2 {
+    color: #ff6b35;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.social {
+    margin: 25px 0;
+}
+
+.social i {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background: #374151;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.social i:hover {
+    background: #ff6b35;
+    transform: translateY(-5px);
+}
+
+/* ==========================
+      CUSTOM SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff6b35;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e85a27;
+}
+
+/* ==========================
+      FADE ANIMATION
+========================== */
+
+.food-card {
+    animation: fadeIn .8s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==========================
+      RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:992px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .overlay h1 {
+        font-size: 44px;
+    }
+
+    .overlay h2 {
+        font-size: 24px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 8px 12px;
+    }
+
+    .overlay h1 {
+        font-size: 34px;
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay p {
+        font-size: 15px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-row {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cart-section {
+        padding: 20px;
+    }
+
+    .filter-section h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    .overlay button {
+        width: 90%;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .food-content h3 {
+        font-size: 20px;
+    }
+
+    .food-content h4 {
+        font-size: 20px;
+    }
+
+    .cart-section h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* ==========================
+      END OF CSS
+========================== */

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASTRA Campus SnackPass</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            SASTRA Campus SnackPass
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#menu">Menu</a></li>
+
+            <li><a href="#cart">Cart</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="overlay">
+
+            <h1>Welcome to SASTRA Campus SnackPass</h1>
+
+            <h2>Pre-Order Your Favourite Canteen Food</h2>
+
+            <p>Skip the Queue • Fresh Food • Quick Pickup</p>
+
+            <a href="#menu">
+                <button>Explore Menu</button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FILTERS ================= -->
+
+    <section class="filter-section">
+
+        <h2>Today's Specials</h2>
+
+        <div class="filters">
+
+            <button class="filter-btn active" data-category="all">All</button>
+
+            <button class="filter-btn" data-category="burger">Burger</button>
+
+            <button class="filter-btn" data-category="pizza">Pizza</button>
+
+            <button class="filter-btn" data-category="snacks">Snacks</button>
+
+            <button class="filter-btn" data-category="meals">Meals</button>
+
+            <button class="filter-btn" data-category="dessert">Dessert</button>
+
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MENU ================= -->
+
+    <section class="menu" id="menu">
+
+        <!-- Burger -->
+
+        <div class="food-card burger">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800">
+
+            <div class="food-content">
+
+                <h3>Cheese Burger</h3>
+
+                <p>Double cheese with crispy lettuce and grilled patty.</p>
+
+                <h4>₹100</h4>
+
+                <button onclick="addToCart('Cheese Burger',120)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Pizza -->
+
+        <div class="food-card pizza">
+
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800">
+
+            <div class="food-content">
+
+                <h3>Veg Pizza</h3>
+
+                <p>Cheesy pizza topped with fresh vegetables.</p>
+
+                <h4>₹150</h4>
+
+                <button onclick="addToCart('Veg Pizza',180)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Cold Coffee -->
+
+        <div class="food-card drinks">
+
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+
+            <div class="food-content">
+
+                <h3>Cold Coffee</h3>
+
+                <p>Refreshing cold coffee with whipped cream.</p>
+
+                <h4>₹80</h4>
+
+                <button onclick="addToCart('Cold Coffee',80)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Chocolate Sundae -->
+
+        <div class="food-card dessert">
+
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800">
+
+            <div class="food-content">
+
+                <h3>Chocolate Sundae</h3>
+
+                <p>Rich chocolate ice cream with toppings.</p>
+
+                <h4>₹95</h4>
+
+                <button onclick="addToCart('Chocolate Sundae',95)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Veg Sandwich -->
+
+        <div class="food-card snacks">
+
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800">
+
+            <div class="food-content">
+
+                <h3>Veg Sandwich</h3>
+
+                <p>Loaded with fresh vegetables and cheese.</p>
+
+                <h4>₹70</h4>
+
+                <button onclick="addToCart('Veg Sandwich',70)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- French Fries -->
+
+        <div class="food-card snacks">
+
+            <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=800">
+
+            <div class="food-content">
+
+                <h3>French Fries</h3>
+
+                <p>Golden crispy fries served hot.</p>
+
+                <h4>₹90</h4>
+
+                <button onclick="addToCart('French Fries',90)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Veg Fried Rice -->
+
+        <div class="food-card meals">
+
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800">
+
+            <div class="food-content">
+
+                <h3>Veg Fried Rice</h3>
+
+                <p>Chinese-style fried rice with vegetables.</p>
+
+                <h4>₹110</h4>
+
+                <button onclick="addToCart('Veg Fried Rice',130)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Paneer Wrap -->
+
+        <div class="food-card meals">
+
+            <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=800">
+
+            <div class="food-content">
+
+                <h3>Paneer Wrap</h3>
+
+                <p>Soft tortilla stuffed with spicy paneer.</p>
+
+                <h4>₹100</h4>
+
+                <button onclick="addToCart('Paneer Wrap',110)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Fresh Lime -->
+
+        <div class="food-card drinks">
+
+            <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800">
+
+            <div class="food-content">
+
+                <h3>Fresh Lime Juice</h3>
+
+                <p>Refreshing lime drink with mint leaves.</p>
+
+                <h4>₹50</h4>
+
+                <button onclick="addToCart('Fresh Lime Juice',50)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Brownie -->
+
+        <div class="food-card dessert">
+
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800">
+
+            <div class="food-content">
+
+                <h3>Chocolate Brownie</h3>
+
+                <p>Warm brownie topped with chocolate syrup.</p>
+
+                <h4>₹85</h4>
+
+                <button onclick="addToCart('Chocolate Brownie',85)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Masala Dosa -->
+
+        <div class="food-card meals">
+
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800">
+
+            <div class="food-content">
+
+                <h3>Masala Dosa</h3>
+
+                <p>Crispy dosa served with chutney and sambar.</p>
+
+                <h4>₹60</h4>
+
+                <button onclick="addToCart('Masala Dosa',95)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Cappuccino -->
+
+        <div class="food-card drinks">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800">
+
+            <div class="food-content">
+
+                <h3>Cappuccino</h3>
+
+                <p>Freshly brewed premium coffee.</p>
+
+                <h4>₹70</h4>
+
+                <button onclick="addToCart('Cappuccino',75)">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CART ================= -->
+
+    <section class="cart-section" id="cart">
+
+        <h2>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Order
+        </h2>
+
+        <div id="cartItems">
+            <p>No items added.</p>
+        </div>
+
+        <div class="total">
+            Total : ₹ <span id="totalPrice">0</span>
+        </div>
+
+        <button id="confirmOrder">
+            Confirm Order
+        </button>
+
+        <div id="tokenBox"></div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <h2>SASTRA Campus SnackPass</h2>
+
+        <p>Smart Ordering System for SASTRA University Canteens</p>
+
+        <div class="social">
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-linkedin"></i>
+
+        </div>
+
+        <p>© 2026 SASTRA Campus SnackPass | Web Development Project</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
